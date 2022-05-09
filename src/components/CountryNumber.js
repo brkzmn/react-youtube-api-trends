@@ -4,9 +4,8 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { SearchBarContext } from "../contexts/SearchBarContext";
-import useFetch from "../hooks/useFetch";
 
-const CountrySelect = ({ data }) => {
+const ResultsNumberSelect = () => {
   const {
     countryCode,
     setCountryCode,
@@ -16,37 +15,35 @@ const CountrySelect = ({ data }) => {
     setResultsNumber,
   } = useContext(SearchBarContext);
 
-  const options =
-    data &&
-    data.map((country) => {
-      return { label: country.name, value: country.alpha2Code };
-    });
+  const options = [
+    { value: 10, label: 10 },
+    { value: 20, label: 20 },
+  ];
 
   return (
-    <FormControl className="country-select">
-      <InputLabel id="demo-simple-select-label">Select a country</InputLabel>
+    <FormControl className="results-number-select">
+      <InputLabel id="demo-simple-select-label">number</InputLabel>
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
         value={options.label}
         label={countryName}
         onChange={(e) => {
-          setCountryCode(e.target.value);
+          setResultsNumber(e.target.value);
         }}
       >
         <MenuItem value="" disabled selected>
-          select a country
+          select number
         </MenuItem>
-        {data.map((country) => {
-          return (
-            <MenuItem key={country.alpha2Code} value={country.alpha2Code}>
-              {country.name}
-            </MenuItem>
-          );
-        })}
+        <MenuItem key={10} value={10}>
+          10
+        </MenuItem>
+        <MenuItem key={20} value={20}>
+          20
+        </MenuItem>
       </Select>
     </FormControl>
   );
 };
 
-export default CountrySelect;
+export default ResultsNumberSelect;

@@ -11,6 +11,7 @@ const useFetch = (url) => {
     }
     try {
       const response = await fetch(url);
+      console.log(response.ok, "res ok");
       if (!response.ok) throw "HTTP Error";
       const data = await response.json();
       setData(data);

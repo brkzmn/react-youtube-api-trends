@@ -2,19 +2,22 @@ import React, { useState, useContext } from "react";
 import useFetch from "../hooks/useFetch";
 import CountrySelect from "./CountrySelect";
 import { SearchBarContext } from "../contexts/SearchBarContext";
+import ResultsNumberSelect from "./CountryNumber";
 
 const TrendSearchBar = () => {
-  const { searchValue, setSearchValue } = useContext(SearchBarContext);
-
-  const countryDetailsUrl = "https://restcountries.com/v3.1/all";
+  const countryDetailsUrl = "https://restcountries.com/v2/all";
   const { data, isLoading, error } = useFetch(countryDetailsUrl);
-  console.log(data);
 
   return (
-    <div className="input-field">
+    <div>
       {error !== null && <div>{error}</div>}
-      {isLoading == true && <div>Loading...</div>}
-      {data !== null && <CountrySelect data={data} />}
+      {isLoading === true && <div>Loading...</div>}
+      {data !== null && (
+        <div className="input-field">
+          <CountrySelect data={data} />
+          <ResultsNumberSelect />
+        </div>
+      )}
     </div>
   );
 };
