@@ -1,4 +1,6 @@
 import React from "react";
+import { GrChannel } from "react-icons/gr";
+import { WiTime2 } from "react-icons/wi";
 
 const VideoCard = ({ video }) => {
   return (
@@ -14,9 +16,13 @@ const VideoCard = ({ video }) => {
       <div className="video-details-wrapper">
         <h2>{video.snippet.title}</h2>
         <div className="video-details-info">
-          <span className="channel-title">{video.snippet.channelTitle}</span>
-          <span className="view-count">{video.statistics.viewCount}</span>
-          <span className="publishing-time">{video.snippet.publishedAt}</span>
+          <span className="channel-title">
+            <GrChannel /> {video.snippet.channelTitle}
+          </span>
+          <span className="view-count">{video.statistics.viewCount} views</span>
+          <span className="publishing-time">
+            <WiTime2 /> {video.snippet.publishedAt}
+          </span>
         </div>
         <div className="video-description">
           <p>{video.snippet.description}</p>

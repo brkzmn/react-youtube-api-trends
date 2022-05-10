@@ -113,4 +113,34 @@ body {
     margin-right: 10px;
     font-size: 0.85rem;
   }
+
+  .watch-trends-wrapper {
+    display: flex;
+  }
+
+  .watch-trends-image-wrapper {
+    width: 70%;
+  }
+
+  .explore-trends-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .explore-trends-image-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .homepage-image {
+    width: 70%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .watch-trends-demo {
+    width: 30%;
+  }
 }

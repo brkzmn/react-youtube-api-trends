@@ -17,8 +17,33 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <Navbar />
-      <TrendSearchBar />
-      {countryCode && <TrendVideos />}
+      <div className="container">
+        <section className="explore-trends-wrapper">
+          <div className="explore-trends-image-wrapper">
+            <img
+              className="homepage-image"
+              src="/images/explore-trends.jpg"
+              alt="explore-trend-videos"
+            />
+          </div>
+          <div className="watch-trends-demo">
+            <pre>Do you want to know what everyone is watching?</pre>
+            <pre>You can search trends videos</pre>
+          </div>
+        </section>
+        <section className="watch-trends-wrapper">
+          <div className="watch-trends-image-wrapper">
+            <img
+              className="homepage-image"
+              src="/images/watch-trends.jpg"
+              alt="youtube-videos"
+            />
+          </div>
+          <div className="watch-trends-demo">
+            <pre>Watch trend videos all around the world.</pre>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
