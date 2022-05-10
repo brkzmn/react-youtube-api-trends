@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import TrendSearchBar from "../components/TrendSearchBar";
 import TrendVideos from "../components/TrendVideos";
 import { SearchBarContext } from "../contexts/SearchBarContext";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const {
@@ -22,7 +24,7 @@ const HomePage = () => {
           <div className="explore-trends-image-wrapper">
             <img
               className="homepage-image"
-              src="/images/explore-trends.jpg"
+              src="/images/1.jpg"
               alt="explore-trend-videos"
             />
           </div>
@@ -35,7 +37,7 @@ const HomePage = () => {
           <div className="watch-trends-image-wrapper">
             <img
               className="homepage-image"
-              src="/images/watch-trends.jpg"
+              src="/images/2.jpg"
               alt="youtube-videos"
             />
           </div>
@@ -43,6 +45,31 @@ const HomePage = () => {
             <pre>Watch trend videos all around the world.</pre>
           </div>
         </section>
+        <section className="watch-later-wrapper">
+          <div className="watch-later-image-wrapper">
+            <img
+              className="homepage-image"
+              src="/images/3.jpg"
+              alt="youtube-videos"
+            />
+          </div>
+          <div className="watch-later-demo">
+            <pre>
+              Watch trend videos <span>when you want.</span>
+            </pre>
+          </div>
+        </section>
+        <div>
+          <Link to="/trends">
+            <Button
+              variant="contained"
+              className="get-started-btn"
+              color="primary"
+            >
+              Get Started
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

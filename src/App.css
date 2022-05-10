@@ -127,7 +127,17 @@ body {
     flex-wrap: wrap;
     flex-direction: row-reverse;
   }
+  .watch-later-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
   .explore-trends-image-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .watch-later-image-wrapper {
     width: 70%;
     display: flex;
     justify-content: flex-end;
@@ -142,5 +152,12 @@ body {
 
   .watch-trends-demo {
     width: 30%;
+  }
+  .watch-later-demo {
+    width: 30%;
+  }
+
+  .trend-videos-container {
+    margin-top: 20px;
   }
 }
