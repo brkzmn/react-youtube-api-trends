@@ -9,11 +9,11 @@ const TrendSearchBar = () => {
   const { data, isLoading, error } = useFetch(countryDetailsUrl);
 
   return (
-    <div>
+    <div className="container">
       {error !== null && <div>{error}</div>}
       {isLoading === true && <div>Loading...</div>}
       {data !== null && (
-        <div className="input-field">
+        <div className="input-field-container">
           <CountrySelect data={data} />
           <ResultsNumberSelect />
         </div>
