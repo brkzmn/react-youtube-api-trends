@@ -27,6 +27,10 @@ body {
   line-height: 1.5;
   font-size: 16px;
 }
+
+a {
+  text-decoration: none;
+}
 .App {
   min-height: 100vh;
   background-color: #fdf8f7;
@@ -57,7 +61,8 @@ body {
 
 .input-field-container {
   min-height: 100px;
-  background-color: #eef5db;
+  background-color: #181818;
+  /* background-color: #607d8b; */
   color: black;
   padding: 20px;
   display: flex;
@@ -65,6 +70,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+  opacity: 0.8;
 }
 
 .country-select {
@@ -78,6 +84,21 @@ body {
   width: 15%;
 }
 
+.homepage-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.started-btn-wrapper {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
 @media (min-width: 1000px) {
   .video-card-wrapper {
     display: flex;

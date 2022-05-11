@@ -22,19 +22,22 @@ const ResultsNumberSelect = () => {
 
   return (
     <FormControl className="results-number-select">
-      <InputLabel id="demo-simple-select-label">number</InputLabel>
+      <InputLabel id="demo-simple-select-label">
+        Select number(optional)
+      </InputLabel>
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
         value={options.label}
-        label={countryName}
+        label="Select number(optional)"
         onChange={(e) => {
           setResultsNumber(e.target.value);
         }}
+        defaultValue={10}
+        MenuProps={{
+          PaperProps: { sx: { backgroundColor: "#f5f5f5", color: "#212121" } },
+        }}
       >
-        <MenuItem value="" disabled selected>
-          select number
-        </MenuItem>
         <MenuItem key={10} value={10}>
           10
         </MenuItem>

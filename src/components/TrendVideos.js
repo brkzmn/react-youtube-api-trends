@@ -32,7 +32,7 @@ const TrendVideos = () => {
   return (
     <div className="container">
       <div className="trend-videos-container">
-        {isLoading === true && <LinearProgress />}
+        {isLoading === true && <LinearProgress color="secondary" />}
         {error !== null && <div>{error} </div>}
         {data !== null &&
           data.items.map((video) => {

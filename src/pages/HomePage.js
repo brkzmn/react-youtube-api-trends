@@ -59,7 +59,7 @@ const HomePage = () => {
             </pre>
           </div>
         </section>
-        <div>
+        <div className="started-btn-wrapper">
           <Link to="/trends">
             <Button
               variant="contained"
