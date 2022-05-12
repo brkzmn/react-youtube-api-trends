@@ -118,6 +118,12 @@ a {
   flex-direction: row;
   align-items: center;
 }
+
+.watch-later-btn-wrapper {
+  cursor: pointer;
+}
+
+/******** media queries **********/
 @media (min-width: 1000px) {
   .video-card-wrapper {
     display: flex;

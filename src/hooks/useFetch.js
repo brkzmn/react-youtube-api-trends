@@ -12,12 +12,10 @@ const useFetch = (url) => {
     }
     try {
       const response = await fetch(url);
-      console.log(response.ok, "res ok");
       if (!response.ok) {
         throw new Error("HTTP Error");
       }
       const data = await response.json();
-      console.log("inside try catch");
       setData(data);
       setIsLoading(false);
     } catch (error) {
