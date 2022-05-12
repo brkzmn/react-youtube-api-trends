@@ -27,25 +27,6 @@ const WatchLaterPage = () => {
       </div>
     </div>
   );
-  //     <div>
-  //       <div className="trend-videos-container">
-  //         {isLoading === true && <LinearProgress color="secondary" />}
-  //         {error !== null && error === "HTTP Error" && (
-  //           <div className="not-found">
-  //             <ErrorIcon /> Currently trending videos in this country are not
-  //             available through our application.
-  //           </div>
-  //         )}
-  //         {error !== null && error !== "HTTP Error" && (
-  //           <div>Something went wrong</div>
-  //         )}
-  //         {data !== null &&
-  //           data.items.map((video) => {
-  //             return <VideoCard video={video} />;
-  //           })}
-  //       </div>
-  //     </div>
-  //   );
 };
 
 export default WatchLaterPage;
