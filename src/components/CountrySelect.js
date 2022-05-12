@@ -3,8 +3,8 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
+
 import { SearchBarContext } from "../contexts/SearchBarContext";
-import useFetch from "../hooks/useFetch";
 
 const CountrySelect = ({ data }) => {
   const {
@@ -24,17 +24,23 @@ const CountrySelect = ({ data }) => {
 
   return (
     <FormControl className="country-select">
-      <InputLabel id="demo-simple-select-label">Select a country</InputLabel>
+      <InputLabel id="demo-simple-select-label" required>
+        Select a country
+      </InputLabel>
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
         value={options.label}
-        label={countryName}
+        label="Select a country"
         onChange={(e) => {
           setCountryCode(e.target.value);
         }}
+        MenuProps={{
+          PaperProps: { sx: { backgroundColor: "#f5f5f5", color: "#212121" } },
+        }}
+        // color="secondary"
       >
-        <MenuItem value="" disabled selected>
+        <MenuItem value="" selected>
           select a country
         </MenuItem>
         {data.map((country) => {

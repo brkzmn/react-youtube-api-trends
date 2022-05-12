@@ -3,6 +3,7 @@ import useFetch from "../hooks/useFetch";
 import TrendSearchBar from "./TrendSearchBar";
 import { SearchBarContext } from "../contexts/SearchBarContext";
 import VideoCard from "./VideoCard";
+import LinearProgress from "@mui/material/LinearProgress";
 
 // https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=FJ&key=AIzaSyDaIgJHYSBYqwrZQjuqCSRn2epWcHvWTD4
 
@@ -29,15 +30,13 @@ const TrendVideos = () => {
   }
 
   return (
-    <div className="container">
-      <div className="trend-videos-container">
-        {isLoading === true && <div>loading...</div>}
-        {error !== null && <div>{error} </div>}
-        {data !== null &&
-          data.items.map((video) => {
-            return <VideoCard video={video} />;
-          })}
-      </div>
+    <div className="trend-videos-container">
+      {isLoading === true && <LinearProgress color="secondary" />}
+      {error !== null && <div>{error} </div>}
+      {data !== null &&
+        data.items.map((video) => {
+          return <VideoCard video={video} />;
+        })}
     </div>
   );
 };
