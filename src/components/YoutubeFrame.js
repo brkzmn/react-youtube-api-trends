@@ -2,23 +2,18 @@ import React from "react";
 import YouTube, { YouTubeProps } from "react-youtube";
 
 const YoutubeFrame = ({ id }) => {
-  // const onPlayerReady: YouTubeProps["onReady"] = (event) => {
-  //   // access to player in all event handlers via event.target
-  //   event.target.pauseVideo();
-  // };
-
-  //   const opts: YouTubeProps["opts"] = {
-  //     height: "390",
-  //     width: "640",
-  //     playerVars: {
-  //       // https://developers.google.com/youtube/player_parameters
-  //       autoplay: 1,
-  //     },
-  //   };
-
   return (
-    <div>
-      <YouTube videoId={id} />
+    <div className="video-frame-wrapper">
+      {/* <YoutubeFrame id={videoId} /> */}
+      <iframe
+        width="560"
+        height="315"
+        src={`https://www.youtube.com/embed/${id}`}
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import YoutubeFrame from "../components/YoutubeFrame";
 const WatchLaterPage = () => {
   const { videosList, setVideosList, setWatchLaterVideosIds } =
     useContext(WatchLaterContext);
+  console.log(videosList);
 
   return (
     <div className="watch-later-page-container">
@@ -14,28 +15,15 @@ const WatchLaterPage = () => {
       <div className="container">
         <h2>Your Video Library</h2>
         <h3>You can find here your saved videos to watch later</h3>
-        <ul>
-          {videosList.length === 0 && (
-            <div>You haven't chosen any videos to watch later yet!</div>
-          )}
+        {videosList.length === 0 && (
+          <div>You haven't chosen any videos to watch later yet!</div>
+        )}
+        <div className="video-frames-container">
           {videosList.length !== 0 &&
             videosList.map((videoId) => {
-              return (
-                <li className="video-frame-wrapper">
-                  {/* <YoutubeFrame id={videoId} /> */}
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${videoId}`}
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  />
-                </li>
-              );
+              return <YoutubeFrame id={videoId} />;
             })}
-        </ul>
+        </div>
       </div>
     </div>
   );

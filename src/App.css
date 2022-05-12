@@ -50,6 +50,7 @@ a {
 }
 
 .container {
+  position: relative;
   width: 90%;
   margin: auto;
   padding-top: 20px;
@@ -145,11 +146,35 @@ a {
   opacity: 0.7;
   color: oldlace;
 }
-ul {
+
+.video-frames-container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.video-frame-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-frame-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
 }
-.video-frame-wrapper {
-  width: 100%;
+
+.video-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /******** media queries **********/
