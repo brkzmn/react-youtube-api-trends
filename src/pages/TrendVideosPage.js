@@ -17,8 +17,10 @@ const TrendVideosPage = () => {
   return (
     <div className="trend-videos-page">
       <Navbar />
-      <TrendSearchBar />
-      {countryCode && <TrendVideos />}
+      <div className={`container ${countryCode ? "active" : "not-active"} `}>
+        <TrendSearchBar />
+        {countryCode && <TrendVideos />}
+      </div>
     </div>
   );
 };

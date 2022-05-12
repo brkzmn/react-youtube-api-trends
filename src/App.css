@@ -51,12 +51,31 @@ a {
 .container {
   width: 90%;
   margin: auto;
+  padding-top: 20px;
 }
 
 #countries {
   width: 100%;
   background-color: #212121;
   min-height: 100px;
+}
+
+.searchbar-container {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.not-active {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  justify-content: center;
 }
 
 .input-field-container {

@@ -64,7 +64,7 @@ const HomePage = () => {
             <Button
               variant="contained"
               className="get-started-btn"
-              color="primary"
+              color="secondary"
             >
               Get Started
             </Button>
