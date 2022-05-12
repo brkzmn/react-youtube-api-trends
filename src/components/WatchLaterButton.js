@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { WatchLaterContext } from "../contexts/WatchLaterContext";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const WatchLaterButton = ({ id }) => {
   const { videosList, setVideosList, setWatchLaterVideosIds } =
@@ -15,8 +17,8 @@ const WatchLaterButton = ({ id }) => {
         setWatchLaterVideosIds(id);
       }}
     >
-      WatchLaterButton
-      {!isInList ? " add" : " added"}
+      watch later
+      {!isInList ? <AccessTimeIcon /> : <CheckCircleOutlineIcon />}
     </div>
   );
 };

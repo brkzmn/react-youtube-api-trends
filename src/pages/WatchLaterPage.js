@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 
 import Navbar from "../components/Navbar";
 import { WatchLaterContext } from "../contexts/WatchLaterContext";
+import YoutubeFrame from "../components/YoutubeFrame";
+
 const WatchLaterPage = () => {
   const { videosList, setVideosList, setWatchLaterVideosIds } =
     useContext(WatchLaterContext);
@@ -18,7 +20,20 @@ const WatchLaterPage = () => {
           )}
           {videosList.length !== 0 &&
             videosList.map((videoId) => {
-              return <li>{videoId}</li>;
+              return (
+                <li className="video-frame-wrapper">
+                  {/* <YoutubeFrame id={videoId} /> */}
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  />
+                </li>
+              );
             })}
         </ul>
       </div>

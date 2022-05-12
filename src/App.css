@@ -36,6 +36,7 @@ a {
   background-color: #fdf8f7;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .logo {
@@ -119,8 +120,36 @@ a {
   align-items: center;
 }
 
+.video-img-wrapper {
+  position: relative;
+}
+
 .watch-later-btn-wrapper {
   cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  opacity: 0.7;
+  color: oldlace;
+  font-size: 1.1rem;
+  display: flex;
+  padding: 2px;
+}
+
+.video-duration {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  opacity: 0.7;
+  color: oldlace;
+}
+ul {
+  width: 100%;
+}
+.video-frame-wrapper {
+  width: 100%;
 }
 
 /******** media queries **********/
