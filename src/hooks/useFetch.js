@@ -6,13 +6,15 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   const getFetchData = async (url) => {
-    if (isLoading === false) {
+    if (isLoading === false || error !== null) {
       setIsLoading(true);
+      setError(null);
     }
     try {
       const response = await fetch(url);
-      console.log(response.ok, "res ok");
-      if (!response.ok) throw "HTTP Error";
+      if (!response.ok) {
+        throw new Error("HTTP Error");
+      }
       const data = await response.json();
       setData(data);
       setIsLoading(false);

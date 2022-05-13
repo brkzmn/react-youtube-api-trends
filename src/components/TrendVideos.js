@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import useFetch from "../hooks/useFetch";
 import TrendSearchBar from "./TrendSearchBar";
 import { SearchBarContext } from "../contexts/SearchBarContext";
-import VideoCard from "./VideoCard";
+import VideoCard from "./VideoDetailsCard";
 import LinearProgress from "@mui/material/LinearProgress";
-
+import ErrorIcon from "@mui/icons-material/Error";
 // https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=FJ&key=AIzaSyDaIgJHYSBYqwrZQjuqCSRn2epWcHvWTD4
 
 const TrendVideos = () => {
@@ -20,19 +20,19 @@ const TrendVideos = () => {
   const url = ` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=${resultsNumber}&regionCode=${countryCode}&key=AIzaSyDaIgJHYSBYqwrZQjuqCSRn2epWcHvWTD4`;
 
   const { data, isLoading, error } = useFetch(url);
-  if (error) {
-    return (
-      <div>
-        <p>this is error message::</p>
-        <div>{error} </div>;
-      </div>
-    );
-  }
 
   return (
     <div className="trend-videos-container">
       {isLoading === true && <LinearProgress color="secondary" />}
-      {error !== null && <div>{error} </div>}
+      {error !== null && error === "HTTP Error" && (
+        <div className="not-found">
+          <ErrorIcon /> Currently trending videos in this country are not
+          available through our application.
+        </div>
+      )}
+      {error !== null && error !== "HTTP Error" && (
+        <div>Something went wrong</div>
+      )}
       {data !== null &&
         data.items.map((video) => {
           return <VideoCard video={video} />;

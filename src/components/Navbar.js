@@ -13,6 +13,9 @@ const Navbar = () => {
       <Link to="/trends">
         <Button>Explore Trends</Button>
       </Link>
+      <Link to="/library">
+        <Button>Video Library</Button>
+      </Link>
     </div>
   );
 };
