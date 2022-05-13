@@ -29,8 +29,10 @@ const HomePage = () => {
             />
           </div>
           <div className="watch-trends-demo">
-            <pre>Do you want to know what everyone is watching?</pre>
-            <pre>You can search trends videos</pre>
+            <p>
+              Do you want to know what everyone is watching? You can search
+              trends videos
+            </p>
           </div>
         </section>
         <section className="watch-trends-wrapper">
@@ -42,7 +44,7 @@ const HomePage = () => {
             />
           </div>
           <div className="watch-trends-demo">
-            <pre>Watch trend videos all around the world.</pre>
+            <p>Watch trend videos all around the world.</p>
           </div>
         </section>
         <section className="watch-later-wrapper">
@@ -54,9 +56,9 @@ const HomePage = () => {
             />
           </div>
           <div className="watch-later-demo">
-            <pre>
+            <p>
               Watch trend videos <span>when you want.</span>
-            </pre>
+            </p>
           </div>
         </section>
         <div className="started-btn-wrapper">

@@ -3,11 +3,12 @@ import React, { useState, useContext } from "react";
 import Navbar from "../components/Navbar";
 import { WatchLaterContext } from "../contexts/WatchLaterContext";
 import YoutubeFrame from "../components/YoutubeFrame";
+import WatchLaterListElement from "../components/WatchLaterListElement";
 
 const WatchLaterPage = () => {
   const { videosList, setVideosList, setWatchLaterVideosIds } =
     useContext(WatchLaterContext);
-  console.log(videosList);
+  const [activeVideoId, setActiveVideoId] = useState(videosList[0]);
 
   return (
     <div className="watch-later-page-container">
@@ -18,12 +19,22 @@ const WatchLaterPage = () => {
         {videosList.length === 0 && (
           <div>You haven't chosen any videos to watch later yet!</div>
         )}
-        <div className="video-frames-container">
-          {videosList.length !== 0 &&
-            videosList.map((videoId) => {
-              return <YoutubeFrame id={videoId} />;
-            })}
-        </div>
+        {videosList.length !== 0 && (
+          <div className="watch-later-list-player">
+            <YoutubeFrame activeVideoId={activeVideoId} />
+            <div className="watch-later-list">
+              {videosList.length !== 0 &&
+                videosList.map((videoId) => {
+                  return (
+                    <WatchLaterListElement
+                      videoId={videoId}
+                      setActiveVideoId={setActiveVideoId}
+                    />
+                  );
+                })}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

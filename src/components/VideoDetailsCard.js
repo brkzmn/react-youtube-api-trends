@@ -4,7 +4,6 @@ import { WiTime2 } from "react-icons/wi";
 import WatchLaterButton from "./WatchLaterButton";
 
 const VideoCard = ({ video }) => {
-  console.log(video.id);
   return (
     <div className="video-card-wrapper">
       <div className="video-img-wrapper">

@@ -11,7 +11,7 @@ const TrendSearchBar = () => {
   return (
     <div className="searchbar-container">
       {error !== null && <div>{error}</div>}
-      {isLoading === true && <div>Loading...</div>}
+      {/* {isLoading === true && <div>Loading...</div>} */}
       {data !== null && (
         <div className="input-field-container">
           <CountrySelect data={data} />

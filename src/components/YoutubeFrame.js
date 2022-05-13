@@ -1,18 +1,18 @@
 import React from "react";
-import YouTube, { YouTubeProps } from "react-youtube";
+import WatchLaterButton from "./WatchLaterButton";
 
-const YoutubeFrame = ({ id }) => {
+const YoutubeFrame = ({ activeVideoId }) => {
   return (
     <div className="video-frame-wrapper">
-      {/* <YoutubeFrame id={videoId} /> */}
+      {/* <WatchLaterButton id={id} /> */}
       <iframe
         width="560"
         height="315"
-        src={`https://www.youtube.com/embed/${id}`}
+        src={`https://www.youtube-nocookie.com/embed/${activeVideoId}`}
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </div>
   );
