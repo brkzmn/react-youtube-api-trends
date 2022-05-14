@@ -1,5 +1,5 @@
 # Site Is Live On:
-https://627e64044a5b871407cbe981--bright-eclair-cf9804.netlify.app/
+https://bright-eclair-cf9804.netlify.app/
 
 # Getting Started with Create React App
 
