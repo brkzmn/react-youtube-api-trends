@@ -6,13 +6,13 @@ import WatchLaterButton from "./WatchLaterButton";
 const VideoCard = ({ video }) => {
   return (
     <div className="video-card-wrapper">
+      <WatchLaterButton id={video.id} />
       <div className="video-img-wrapper">
         <img
           src={video.snippet.thumbnails.medium.url}
           alt={video.snippet.title}
         />
         <span className="video-duration">{video.contentDetails.duration}</span>
-        <WatchLaterButton id={video.id} />
       </div>
 
       <div className="video-details-wrapper">

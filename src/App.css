@@ -278,6 +278,10 @@ li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #404040;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
   }
   .video-img-wrapper {
     position: relative;
@@ -354,6 +358,11 @@ li {
 
   .trend-videos-container {
     margin-top: 20px;
+    background-color: #181818;
+    color: #fdf8f7;
+    height: 80vh;
+    overflow: auto;
+    padding: 10px;
   }
 
   .video-frame-wrapper {
@@ -393,6 +402,7 @@ li {
     height: 80vh;
     overflow: auto;
     padding: 10px;
+    background-color: #282828;
   }
 
   .watch-later-list-element {
@@ -405,6 +415,7 @@ li {
     margin-bottom: 10px;
     color: #fdf8f7;
     padding: 10px;
+    height: fit-content;
   }
 
   .watch-later-list-element-wrapper {
