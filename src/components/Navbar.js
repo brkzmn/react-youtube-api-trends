@@ -1,22 +1,41 @@
 import React from "react";
 import { FaYoutube } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <header className="navbar">
       <FaYoutube className="logo" />
-      <Link to="/">
-        <Button>Home</Button>
-      </Link>
-      <Link to="/trends">
-        <Button>Explore Trends</Button>
-      </Link>
-      <Link to="/library">
-        <Button>Video Library</Button>
-      </Link>
-    </div>
+      <ul className="navbar-paths">
+        <li>
+          <NavLink
+            className={(navData) => (navData.isActive ? "active" : "")}
+            to="/"
+          >
+            <Button>Home</Button>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={(navData) => (navData.isActive ? "active" : "")}
+            to="/trends"
+          >
+            <Button>Explore Trends</Button>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={(navData) => (navData.isActive ? "active" : "")}
+            to="/library"
+          >
+            <Button>Video Library</Button>
+          </NavLink>
+        </li>
+      </ul>
+    </header>
+
+    // <div>NAVBAR</div>
   );
 };
 

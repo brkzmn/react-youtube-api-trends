@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import useFetch from "../hooks/useFetch";
 import TrendSearchBar from "./TrendSearchBar";
 import { SearchBarContext } from "../contexts/SearchBarContext";
-import VideoCard from "./VideoDetailsCard";
+import TrendVideoDetailsCard from "./TrendVideoDetailsCard";
 import LinearProgress from "@mui/material/LinearProgress";
 import ErrorIcon from "@mui/icons-material/Error";
 // https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=FJ&key=AIzaSyDaIgJHYSBYqwrZQjuqCSRn2epWcHvWTD4
@@ -35,7 +35,7 @@ const TrendVideos = () => {
       )}
       {data !== null &&
         data.items.map((video) => {
-          return <VideoCard video={video} />;
+          return <TrendVideoDetailsCard video={video} />;
         })}
     </div>
   );
