@@ -7,6 +7,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./components/Theme";
 import { WatchLaterProvider } from "./contexts/WatchLaterContext";
 import WatchLaterPage from "./pages/WatchLaterPage";
+import SelectedVideoPage from "./pages/SelectedVideoPage";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/trends" element={<TrendVideosPage />} />
+                <Route
+                  path="/watch-video/:id"
+                  element={<SelectedVideoPage />}
+                />
                 <Route path="/library" element={<WatchLaterPage />} />
               </Routes>
             </Router>
