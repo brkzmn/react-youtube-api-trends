@@ -6,14 +6,7 @@ import { SearchBarContext } from "../contexts/SearchBarContext";
 import Footer from "../components/Footer";
 
 const TrendVideosPage = () => {
-  const {
-    countryCode,
-    setCountryCode,
-    countryName,
-    setCountryName,
-    resultsNumber,
-    setResultsNumber,
-  } = useContext(SearchBarContext);
+  const { countryCode } = useContext(SearchBarContext);
 
   return (
     <div className="trend-videos-page">

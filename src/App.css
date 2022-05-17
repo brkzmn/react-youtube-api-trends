@@ -196,10 +196,6 @@ header {
   font-size: 4rem;
 }
 
-/* .watch-later-page-container {
-  min-height: 100vh;
-} */
-
 .watch-later-btn-wrapper {
   cursor: pointer;
   position: absolute;
@@ -342,6 +338,7 @@ header {
   background-color: #282828;
   min-height: 100vh;
   padding-top: 100px;
+  padding-bottom: 40px;
 }
 .close-icon-wrapper {
   display: flex;

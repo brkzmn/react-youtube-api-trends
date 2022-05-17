@@ -7,14 +7,7 @@ import Select from "@mui/material/Select";
 import { SearchBarContext } from "../contexts/SearchBarContext";
 
 const CountrySelect = ({ data }) => {
-  const {
-    countryCode,
-    setCountryCode,
-    countryName,
-    setCountryName,
-    resultsNumber,
-    setResultsNumber,
-  } = useContext(SearchBarContext);
+  const { setCountryCode } = useContext(SearchBarContext);
 
   const options =
     data &&
@@ -38,7 +31,6 @@ const CountrySelect = ({ data }) => {
         MenuProps={{
           PaperProps: { sx: { backgroundColor: "#f5f5f5", color: "#212121" } },
         }}
-        // color="secondary"
       >
         <MenuItem value="" selected>
           select a country

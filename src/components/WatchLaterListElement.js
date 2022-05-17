@@ -3,9 +3,9 @@ import useFetch from "../hooks/useFetch";
 import WatchLaterButton from "./WatchLaterButton";
 
 const WatchLaterListElement = ({ videoId, setActiveVideoId }) => {
-  const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=AIzaSyDaIgJHYSBYqwrZQjuqCSRn2epWcHvWTD4`;
+  const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
 
-  const { data, error, isLoading } = useFetch(url);
+  const { data, error } = useFetch(url);
   return (
     <div className="watch-later-list-element">
       {error !== null && error !== "HTTP Error" && (
