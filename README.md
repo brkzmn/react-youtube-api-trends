@@ -1,7 +1,12 @@
-# Site Is Live On:
+# React-Youtube Api Trends
+
+## Description
+
+In this project, the most watched videos on Youtube are presented. By making a country-based selection, the most watched videos in each country can be seen and these videos can be watched. Videos can also be saved for later viewing. The project was built using React.
+#### App Is Live On:
 https://bright-eclair-cf9804.netlify.app/
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -16,11 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
