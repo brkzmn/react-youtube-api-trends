@@ -5,6 +5,7 @@ import TrendVideos from "../components/TrendVideos";
 import { SearchBarContext } from "../contexts/SearchBarContext";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   const {
@@ -21,42 +22,44 @@ const HomePage = () => {
       <Navbar />
       <div className="container">
         <section className="explore-trends-wrapper">
-          <div className="explore-trends-image-wrapper">
+          <div className="explore-trends-image-wrapper homepage-image-wrapper">
             <img
               className="homepage-image"
-              src="/images/1.jpg"
+              src="/images/explore-trends.jpg"
               alt="explore-trend-videos"
             />
           </div>
           <div className="watch-trends-demo">
-            <p>
+            <p className="homepage-description-text">
               Do you want to know what everyone is watching? You can search
               trends videos
             </p>
           </div>
         </section>
         <section className="watch-trends-wrapper">
-          <div className="watch-trends-image-wrapper">
+          <div className="watch-trends-image-wrapper homepage-image-wrapper">
             <img
               className="homepage-image"
-              src="/images/2.jpg"
+              src="/images/youtube-videos.jpg"
               alt="youtube-videos"
             />
           </div>
           <div className="watch-trends-demo">
-            <p>Watch trend videos all around the world.</p>
+            <p className="homepage-description-text">
+              Watch trend videos all around the world.
+            </p>
           </div>
         </section>
-        <section className="watch-later-wrapper">
-          <div className="watch-later-image-wrapper">
+        <section className="watch-later-wrapper ">
+          <div className="watch-later-image-wrapper homepage-image-wrapper">
             <img
               className="homepage-image"
-              src="/images/3.jpg"
+              src="/images/watch-later.jpg"
               alt="youtube-videos"
             />
           </div>
           <div className="watch-later-demo">
-            <p>
+            <p className="homepage-description-text">
               Watch trend videos <span>when you want.</span>
             </p>
           </div>
@@ -73,6 +76,7 @@ const HomePage = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import TrendSearchBar from "../components/TrendSearchBar";
 import TrendVideos from "../components/TrendVideos";
 import { SearchBarContext } from "../contexts/SearchBarContext";
+import Footer from "../components/Footer";
 
 const TrendVideosPage = () => {
   const {
@@ -25,6 +26,7 @@ const TrendVideosPage = () => {
         <TrendSearchBar />
         {countryCode && <TrendVideos />}
       </div>
+      <Footer />
     </div>
   );
 };

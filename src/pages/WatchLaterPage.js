@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
-
 import Navbar from "../components/Navbar";
 import { WatchLaterContext } from "../contexts/WatchLaterContext";
 import YoutubeFrame from "../components/YoutubeFrame";
 import WatchLaterListElement from "../components/WatchLaterListElement";
+import Footer from "../components/Footer";
 
 const WatchLaterPage = () => {
   const { videosList, setVideosList, setWatchLaterVideosIds } =
@@ -36,6 +36,7 @@ const WatchLaterPage = () => {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 };
