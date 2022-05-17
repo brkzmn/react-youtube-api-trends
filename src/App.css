@@ -50,22 +50,43 @@ li {
   display: flex;
 }
 
-.logo {
+header {
+  position: relative;
+}
+.logo-wrapper {
   color: red;
-  width: 10%;
+  height: 100%;
+  position: absolute;
+  left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-wrapper svg {
+  font-size: 2rem;
 }
 
 .navbar-paths {
   width: 50%;
   display: flex;
+  flex-direction: column;
+}
+
+.navbar .navbar-paths {
+  flex-direction: row;
 }
 
 .container {
   position: relative;
   width: 90%;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 100px;
 }
+
+/* .sidebar-container .navbar-paths {
+  flex-direction: column;
+} */
 
 #countries {
   width: 100%;
@@ -80,8 +101,10 @@ li {
 }
 
 .active {
+  display: inline-block;
   border-bottom: 2px solid #ef5350;
 }
+
 .select-active {
   display: flex;
   flex-direction: column;
@@ -299,6 +322,7 @@ li {
 .selected-video-page-container {
   background-color: #282828;
   min-height: 100vh;
+  padding-top: 100px;
 }
 .close-icon-wrapper {
   display: flex;
