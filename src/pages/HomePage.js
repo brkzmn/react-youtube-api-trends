@@ -1,22 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
-import TrendSearchBar from "../components/TrendSearchBar";
-import TrendVideos from "../components/TrendVideos";
-import { SearchBarContext } from "../contexts/SearchBarContext";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const HomePage = () => {
-  const {
-    countryCode,
-    setCountryCode,
-    countryName,
-    setCountryName,
-    resultsNumber,
-    setResultsNumber,
-  } = useContext(SearchBarContext);
-
   return (
     <div className="home-page">
       <Navbar />

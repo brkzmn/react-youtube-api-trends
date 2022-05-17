@@ -6,14 +6,7 @@ import Select from "@mui/material/Select";
 import { SearchBarContext } from "../contexts/SearchBarContext";
 
 const ResultsNumberSelect = () => {
-  const {
-    countryCode,
-    setCountryCode,
-    countryName,
-    setCountryName,
-    resultsNumber,
-    setResultsNumber,
-  } = useContext(SearchBarContext);
+  const { setResultsNumber } = useContext(SearchBarContext);
 
   const options = [
     { value: 10, label: 10 },

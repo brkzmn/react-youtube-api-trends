@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
 const TrendVideoDetailsCard = ({ video }) => {
-  console.log(video.contentDetails.duration);
   const durationObj = parse(video.contentDetails.duration);
   let videoDuration;
 
@@ -16,8 +15,6 @@ const TrendVideoDetailsCard = ({ video }) => {
   } else {
     videoDuration = `${durationObj.hours}:${durationObj.minutes}:${durationObj.seconds}`;
   }
-
-  console.log(durationObj.hours);
 
   return (
     <div className="video-card-wrapper">

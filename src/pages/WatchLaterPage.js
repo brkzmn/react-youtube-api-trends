@@ -6,8 +6,7 @@ import WatchLaterListElement from "../components/WatchLaterListElement";
 import Footer from "../components/Footer";
 
 const WatchLaterPage = () => {
-  const { videosList, setVideosList, setWatchLaterVideosIds } =
-    useContext(WatchLaterContext);
+  const { videosList } = useContext(WatchLaterContext);
   const [activeVideoId, setActiveVideoId] = useState(videosList[0]);
 
   return (
@@ -24,9 +23,10 @@ const WatchLaterPage = () => {
             <YoutubeFrame activeVideoId={activeVideoId} />
             <div className="watch-later-list">
               {videosList.length !== 0 &&
-                videosList.map((videoId) => {
+                videosList.map((videoId, index) => {
                   return (
                     <WatchLaterListElement
+                      key={index}
                       videoId={videoId}
                       setActiveVideoId={setActiveVideoId}
                     />

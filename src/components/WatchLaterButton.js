@@ -4,8 +4,7 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const WatchLaterButton = ({ id }) => {
-  const { videosList, setVideosList, setWatchLaterVideosIds } =
-    useContext(WatchLaterContext);
+  const { videosList, setWatchLaterVideosIds } = useContext(WatchLaterContext);
 
   const isInList = videosList.includes(id);
 
