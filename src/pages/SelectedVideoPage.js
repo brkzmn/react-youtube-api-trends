@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import YoutubeFrame from "../components/YoutubeFrame";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const SelectedVideoPage = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ const SelectedVideoPage = () => {
           <YoutubeFrame activeVideoId={id} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -41,6 +41,7 @@ li {
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 .navbar {
@@ -67,6 +68,13 @@ header {
   font-size: 2rem;
 }
 
+.logo-text {
+  font-size: 0.8rem;
+  color: #fdf8f7;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 .navbar-paths {
   width: 50%;
   display: flex;
@@ -80,13 +88,18 @@ header {
 .container {
   position: relative;
   width: 90%;
+  min-height: 95vh;
   margin: auto;
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 
-/* .sidebar-container .navbar-paths {
-  flex-direction: column;
-} */
+.homepage-description-text {
+  text-align: center;
+  text-align: center;
+  line-height: 2rem;
+  padding: 1rem;
+}
 
 #countries {
   width: 100%;
@@ -113,7 +126,7 @@ header {
 .select-not-active {
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 95vh;
   justify-content: center;
 }
 
@@ -182,6 +195,10 @@ header {
 .play-icon-wrapper svg:hover {
   font-size: 4rem;
 }
+
+/* .watch-later-page-container {
+  min-height: 100vh;
+} */
 
 .watch-later-btn-wrapper {
   cursor: pointer;
@@ -282,6 +299,8 @@ header {
   -webkit-box-orient: vertical;
   overflow: hidden;
   padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .watch-later-list-element-image {
@@ -334,8 +353,45 @@ header {
   color: #fdf8f7;
   font-size: 2rem;
 }
+
+.footer-container {
+  display: flex;
+  background-color: #121212;
+  min-height: 50px;
+  color: #fdf8f7;
+  flex-direction: column;
+}
+
+.copyright-wrapper {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-wrapper li {
+  margin-right: 1rem;
+}
+
 /******** media queries ***********************/
 @media (min-width: 600px) {
+  .homepage-description-text {
+    text-align: center;
+    text-align: center;
+    line-height: 2rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+
   .results-number-select {
     width: 15%;
   }
@@ -360,6 +416,7 @@ header {
     color: #fdf8f7;
     position: relative;
     background-color: #404040;
+    width: 50%;
   }
 
   .watch-later-list-element-wrapper {
@@ -368,11 +425,21 @@ header {
   }
 
   .watch-later-list-element-title {
+    text-align: center;
+    padding: 5px;
+    max-height: 20%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .watch-later-list-element-image {
-    height: auto;
-    width: fit-content;
+    height: 80%;
+    width: 90%;
+    object-fit: contain;
   }
 
   .watch-later-list-player {
@@ -398,7 +465,6 @@ header {
     width: 80%;
     padding-bottom: 56.25%;
     height: 0;
-    /* background-color: #181818; */
   }
 
   .video-frame-wrapper iframe {
@@ -408,9 +474,35 @@ header {
     width: 80%;
     height: 80%;
   }
+
+  .footer-container {
+    flex-direction: row;
+  }
+
+  .copyright-wrapper {
+    width: 50%;
+  }
+
+  .contact-wrapper {
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  .contact-wrapper li {
+    margin-right: 1rem;
+  }
 }
 
 @media (min-width: 1000px) {
+  .homepage-description-text {
+    text-align: center;
+    text-align: center;
+    line-height: 2rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin-top: 50%;
+  }
+
   .country-select {
     padding: 10px;
     width: 80%;
@@ -508,11 +600,19 @@ header {
     justify-content: flex-end;
   }
 
+  .homepage-image-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .homepage-image {
     width: 70%;
     height: 500px;
     object-fit: cover;
     object-position: center;
+    border-radius: 2%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 7px 4px;
   }
 
   .watch-trends-demo {
@@ -550,7 +650,6 @@ header {
     display: flex;
     justify-content: space-around;
     background-color: #181818;
-    /* backdrop-filter: blur(10px); */
     width: 100%;
     min-height: 100%;
     display: flex;
@@ -601,7 +700,26 @@ header {
   }
 
   .watch-later-list-element-image {
-    height: auto;
-    width: fit-content;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+  }
+
+  .footer-container {
+    flex-direction: row;
+  }
+
+  .copyright-wrapper {
+    width: 50%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-wrapper li {
+    margin-right: 1rem;
   }
 }
